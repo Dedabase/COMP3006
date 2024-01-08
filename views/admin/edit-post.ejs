@@ -1,0 +1,30 @@
+<a href="/dashboard">&larr; Back</a>
+<div class="admin-title">
+  <h2>View / Edit Post</h2>
+
+  <form action="/delete-post/<%= data._id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete" class="btn-delete btn">
+  </form>
+
+</div>
+
+<form action="/edit-post/<%= data._id %>?_method=PUT" method="POST">
+
+  <label for="Name"><b>Name</b></label>
+  <input type="text" placeholder="Hotel Name" name="Name" value="<%= data.HotelName %>">
+
+  <label for="Location"><b>Location</b></label>
+  <input type="text" placeholder="Location" name="Location" value="<%= data.HotelLocation %>">
+
+  <label for="body"><b>Description</b></label>
+  <textarea name="body" cols="50" rows="10" value="<%= data.HotelDesc %>"></textarea>
+
+  <label for="Rating"><b>Rating</b></label>
+  <input type="text" placeholder="Rating" name="Rating" value="<%= data.Rating%>">
+  
+  <label for="Rooms"><b>No. of Rooms</b></label>
+  <input type="text" placeholder="Rooms" name="Rooms" value="<%= data.Rooms %>">
+
+  <input type="submit" value="Update" class="btn">
+
+</form>

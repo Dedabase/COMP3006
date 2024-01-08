@@ -1,0 +1,31 @@
+<div class="hotelintro">
+    <h1 class="hotel_welcome">3006 Hotel Service</h1>
+    <p class="hotel_body">Welcome to the 3006 Hotel Service</p>
+  </div>
+  
+  <img src="/img/hotel-gen.jpg" alt="generic hotel" class="hotel-image" width="981" height="528">
+  
+  <section class="articles">
+    <h2 class="hotellisting_head">Listings</h2>
+  
+    <ul class="hotel-ul">
+
+      <% data.forEach(post => { %>
+        <li>
+          <a href="/post/<%= post._id %>">
+            <span><%= post.HotelName %></span>
+            <span class="hotel-rating"><%= post.rating %></span>
+            <span class="hotel-location"><%= post.HotelLocation %></span>
+            <span class="hotel-rooms"><%= post.rooms %></span>
+          </a>
+        </li>
+
+        <% }) %>
+
+    </ul>
+    
+    <% if (nextPage !== null) { %>
+      <a href="?page=<%= nextPage %>" class="pagination">&lt; View Other Listings</a>
+    <% } %> 
+  
+  </section>

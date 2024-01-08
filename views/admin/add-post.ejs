@@ -1,0 +1,25 @@
+<a href="/dashboard">&larr; Bacl</a>
+<div class="admin-title">
+  <h2>Add New Post</h2>
+</div>
+
+<form action="/add-post" method="POST">
+
+  <label for="Name"><b>Name</b></label>
+  <input type="text" placeholder="Hotel Name" name="Name">
+
+  <label for="Location"><b>Location</b></label>
+  <input type="text" placeholder="Location" name="Location">
+
+  <label for="body"><b>Description</b></label>
+  <textarea name="body" cols="50" rows="10"></textarea>
+
+  <label for="Rating"><b>Rating</b></label>
+  <input type="text" placeholder="Rating" name="Rating">
+  
+  <label for="Rooms"><b>No. of Rooms</b></label>
+  <input type="text" placeholder="Rooms" name="Rooms">
+
+  <input type="submit" value="Add" class="btn">
+
+</form>
